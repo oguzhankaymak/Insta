@@ -1,5 +1,6 @@
 import React from 'react';
 import { ColorValue, StyleSheet, TextStyle } from 'react-native';
+import { isTablet } from '../utils/Metrics';
 import colors from './colors';
 
 export interface ITheme {
@@ -9,12 +10,17 @@ export interface ITheme {
   background: ColorValue;
   dark: ColorValue;
   white: ColorValue;
-  textStyles: { loginTitle: TextStyle; bigTitle: TextStyle };
+  textStyles: {
+    loginTitle: TextStyle;
+    bigTitle: TextStyle;
+    largeInput: TextStyle;
+    buttonText: TextStyle;
+  };
 }
 
 const texts = StyleSheet.create({
   loginTitle: {
-    fontSize: 25,
+    fontSize: isTablet ? 35 : 25,
     color: colors.main.black,
     fontWeight: 'bold',
   } as TextStyle,
@@ -23,12 +29,22 @@ const texts = StyleSheet.create({
     fontSize: 19,
     color: colors.main.black,
   } as TextStyle,
+
+  largeInput: {
+    fontSize: isTablet ? 24 : 13,
+    color: colors.main.black,
+  } as TextStyle,
+
+  buttonText: {
+    fontSize: isTablet ? 24 : 13,
+    color: colors.main.white,
+  },
 });
 
 const defaultTheme: ITheme = {
   primary: colors.blue.primary,
-  secondary: colors.gray.secondary,
-  tertiary: colors.gray.primary,
+  secondary: colors.gray.primary,
+  tertiary: colors.gray.secondary,
   background: colors.main.white,
   dark: colors.main.black,
   white: colors.main.white,
