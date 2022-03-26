@@ -45,11 +45,16 @@ const SessionProvider: FC = ({ children }) => {
   };
 
   const checkLoggedIn = async () => {
-    const credentials = await Keychain.getGenericPassword();
-    if (credentials) {
-      sessionDispatch({ type: SessionActions.LOGIN });
-    } else {
-      console.log('No credentials stored');
+    try {
+      const credentials = await Keychain.getGenericPassword();
+      if (credentials) {
+        sessionDispatch({ type: SessionActions.LOGIN });
+      } else {
+        console.log('No credentials stored');
+      }
+    } catch (error) {
+    } finally {
+      sessionDispatch({ type: SessionActions.HIDE_LOADING });
     }
   };
 
