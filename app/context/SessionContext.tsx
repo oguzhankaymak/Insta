@@ -10,6 +10,7 @@ const sessionContextDefaultValues: ISessionContext = {
   sessionData: { isLoggedIn: false, isLoading: false },
   login: () => {},
   logout: () => {},
+  checkLoggedIn: () => {},
 };
 
 const SessionContext = createContext<ISessionContext>(
@@ -43,12 +44,22 @@ const SessionProvider: FC = ({ children }) => {
     }
   };
 
+  const checkLoggedIn = async () => {
+    const credentials = await Keychain.getGenericPassword();
+    if (credentials) {
+      sessionDispatch({ type: SessionActions.LOGIN });
+    } else {
+      console.log('No credentials stored');
+    }
+  };
+
   return (
     <SessionContext.Provider
       value={{
         sessionData,
         login,
         logout,
+        checkLoggedIn,
       }}>
       {children}
     </SessionContext.Provider>
