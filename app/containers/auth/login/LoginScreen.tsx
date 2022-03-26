@@ -7,9 +7,11 @@ import { useTheme } from '../../../theme/theme';
 import styles from './styles/LoginScreen.style';
 
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { useSessionContext } from '../../../context/SessionContext';
 
 const LoginScreen = () => {
   const theme = useTheme();
+  const { login } = useSessionContext();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -71,7 +73,7 @@ const LoginScreen = () => {
             ]}>
             <Button
               text={'Login'}
-              onPress={() => console.log('Click')}
+              onPress={() => login(username, password)}
               disabled={username.length === 0 || password.length === 0}
             />
           </View>
