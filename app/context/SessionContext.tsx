@@ -4,6 +4,8 @@ import { sessionInitialData } from './session/initialState';
 import sessionReducers from './session/reducer';
 import { ISessionContext } from './session/types';
 
+import * as Keychain from 'react-native-keychain';
+
 const sessionContextDefaultValues: ISessionContext = {
   sessionData: { isLoggedIn: false, isLoading: false },
   login: () => {},
@@ -20,12 +22,25 @@ const SessionProvider: FC = ({ children }) => {
     sessionInitialData,
   );
 
-  const login = () => {
-    sessionDispatch({ type: SessionActions.LOGIN });
+  const login = async (username: string, password: string) => {
+    try {
+      await Keychain.setGenericPassword(username, password);
+      sessionDispatch({ type: SessionActions.LOGIN });
+    } catch (error) {
+      console.log('error on setGenericPassword :', error);
+    } finally {
+      sessionDispatch({ type: SessionActions.HIDE_LOADING });
+    }
   };
 
-  const logout = () => {
-    sessionDispatch({ type: SessionActions.LOGOUT });
+  const logout = async () => {
+    try {
+      await Keychain.resetGenericPassword();
+    } catch (error) {
+      console.log('error on resetGenericPassword :', error);
+    } finally {
+      sessionDispatch({ type: SessionActions.LOGOUT });
+    }
   };
 
   return (

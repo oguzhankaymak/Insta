@@ -11,6 +11,6 @@ export interface ISessionData {
 
 export interface ISessionContext {
   sessionData: ISessionData;
-  login: () => void;
+  login: (username: string, password: string) => void;
   logout: () => void;
 }
