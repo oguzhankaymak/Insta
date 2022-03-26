@@ -24,7 +24,7 @@ const sessionReducers = (state: ISessionData, action: ISessionAction) => {
     case SessionActions.HIDE_LOADING: {
       return {
         ...state,
-        isLoading: true,
+        isLoading: false,
       };
     }
     default:
