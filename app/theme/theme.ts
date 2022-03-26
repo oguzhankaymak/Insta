@@ -5,12 +5,20 @@ import colors from './colors';
 export interface ITheme {
   primary: ColorValue;
   secondary: ColorValue;
+  tertiary: ColorValue;
   background: ColorValue;
   dark: ColorValue;
-  textStyles: { bigTitle: TextStyle };
+  white: ColorValue;
+  textStyles: { loginTitle: TextStyle; bigTitle: TextStyle };
 }
 
 const texts = StyleSheet.create({
+  loginTitle: {
+    fontSize: 25,
+    color: colors.main.black,
+    fontWeight: 'bold',
+  } as TextStyle,
+
   bigTitle: {
     fontSize: 19,
     color: colors.main.black,
@@ -19,9 +27,11 @@ const texts = StyleSheet.create({
 
 const defaultTheme: ITheme = {
   primary: colors.blue.primary,
-  secondary: colors.gray.primary,
+  secondary: colors.gray.secondary,
+  tertiary: colors.gray.primary,
   background: colors.main.white,
   dark: colors.main.black,
+  white: colors.main.white,
   textStyles: texts,
 };
 
