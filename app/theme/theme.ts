@@ -15,6 +15,12 @@ export interface ITheme {
     bigTitle: TextStyle;
     largeInput: TextStyle;
     buttonText: TextStyle;
+    usernameText: TextStyle;
+    placeNameText: TextStyle;
+    commentText: TextStyle;
+    usernameBoldText: TextStyle;
+    dateText: TextStyle;
+    likeCountText: TextStyle;
   };
 }
 
@@ -38,6 +44,38 @@ const texts = StyleSheet.create({
   buttonText: {
     fontSize: isTablet ? 24 : 13,
     color: colors.main.white,
+  },
+
+  usernameText: {
+    fontSize: isTablet ? 20 : 10,
+    color: colors.main.black,
+  },
+
+  placeNameText: {
+    fontSize: isTablet ? 20 : 10,
+    color: colors.main.black,
+  },
+
+  commentText: {
+    fontSize: isTablet ? 15 : 11,
+    color: colors.gray.tertiary,
+  },
+
+  usernameBoldText: {
+    fontSize: isTablet ? 20 : 10,
+    color: colors.main.black,
+    fontWeight: 'bold',
+  },
+
+  dateText: {
+    fontSize: isTablet ? 14 : 10,
+    color: colors.gray.tertiary,
+  },
+
+  likeCountText: {
+    fontSize: isTablet ? 22 : 12,
+    color: colors.main.black,
+    fontWeight: '600',
   },
 });
 
