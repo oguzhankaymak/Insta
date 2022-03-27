@@ -9,6 +9,7 @@ const colors = {
   gray: {
     primary: 'rgb(250, 250, 250)',
     secondary: 'rgb(239, 239, 239)',
+    tertiary: 'rgb(153, 153, 153)',
   },
 };
 export default colors;
