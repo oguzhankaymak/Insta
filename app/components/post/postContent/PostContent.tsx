@@ -4,7 +4,8 @@ import { useTheme } from '../../../theme/theme';
 import { IContent, TypeEnum } from '../Post';
 
 import styles from './styles/PostContent.style';
-import FastImage from 'react-native-fast-image';
+import VideoPlayer from '../../videoPlayer/VideoPlayer';
+import ImageView from '../../imageView/ImageView';
 
 export interface IPostContent {
   content: IContent[];
@@ -20,9 +21,9 @@ const PostContent: FC<IPostContent> = ({ content }) => {
 
   if (content.length === 1) {
     return content[0].type === TypeEnum.image ? (
-      <FastImage source={{ uri: content[0].source }} style={styles.postImage} />
+      <ImageView source={content[0].source} />
     ) : (
-      <FastImage source={{ uri: content[0].source }} style={styles.postImage} />
+      <VideoPlayer source={content[0].source} />
     );
   }
   return (
@@ -34,9 +35,13 @@ const PostContent: FC<IPostContent> = ({ content }) => {
         data={content}
         disableIntervalMomentum={true}
         onViewableItemsChanged={onViewRef.current}
-        renderItem={({ item }) => (
-          <FastImage source={{ uri: item.source }} style={styles.postImage} />
-        )}
+        renderItem={({ item }) => {
+          return item.type === TypeEnum.image ? (
+            <ImageView source={item.source} />
+          ) : (
+            <VideoPlayer source={content[0].source} />
+          );
+        }}
       />
       <View style={styles.scrollBar}>
         {content.map((item: any, index: number) => (
