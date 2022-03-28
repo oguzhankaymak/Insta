@@ -6,26 +6,26 @@ import { MoreHorizontal } from '../../icons';
 import styles from './styles/PostHeader.style';
 
 interface IPostHeader {
+  profileImg: string;
   username: string;
-  place: string;
+  place?: string;
 }
 
-const PostHeader: FC<IPostHeader> = ({ username, place }) => {
+const PostHeader: FC<IPostHeader> = ({ profileImg, username, place }) => {
   const theme = useTheme();
   return (
     <View style={styles.container}>
       <View style={styles.nameContainer}>
-        <Image
-          source={require('../../../assets/images/image4.jpg')}
-          style={styles.userImage}
-        />
+        <Image source={{ uri: profileImg }} style={styles.userImage} />
         <View>
           <Text style={[styles.username, theme.textStyles.usernameText]}>
             {username}
           </Text>
-          <Text style={[styles.placeName, theme.textStyles.placeNameText]}>
-            {place}
-          </Text>
+          {place && (
+            <Text style={[styles.placeName, theme.textStyles.placeNameText]}>
+              {place}
+            </Text>
+          )}
         </View>
       </View>
       <TouchableOpacity>

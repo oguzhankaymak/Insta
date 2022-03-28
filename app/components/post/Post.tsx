@@ -18,6 +18,7 @@ export interface IContent {
 }
 
 export interface IPost {
+  profileImg: string;
   username: string;
   place: string;
   likeCount: number;
@@ -34,7 +35,11 @@ export interface IPostProps {
 const Post: FC<IPostProps> = ({ postData }) => {
   return (
     <>
-      <PostHeader username={postData.username} place={postData.place} />
+      <PostHeader
+        profileImg={postData.profileImg}
+        username={postData.username}
+        place={postData.place}
+      />
       <PostContent content={postData.contents} />
       <PostActions />
       <PostLikes count={postData.likeCount} />
