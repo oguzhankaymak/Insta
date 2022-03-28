@@ -1,2 +1,4 @@
-export const SUCCESS = 'SUCCESS';
-export const FAILURE = 'FAILURE';
+export enum ResultEnum {
+  'SUCCESS' = 'SUCCESS',
+  'FAILURE' = 'FAILURE',
+}
