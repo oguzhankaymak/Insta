@@ -14,7 +14,6 @@ const PostContent: FC<IPostContent> = ({ content }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const onViewRef = useRef((viewableItems: any) => {
-    console.log(viewableItems);
     setActiveIndex(viewableItems?.viewableItems[0]?.index);
   });
 
@@ -34,11 +33,9 @@ const PostContent: FC<IPostContent> = ({ content }) => {
         data={content}
         disableIntervalMomentum={true}
         onViewableItemsChanged={onViewRef.current}
-        renderItem={({ item }) => {
-          return (
-            <Image source={{ uri: item.source }} style={styles.postImage} />
-          );
-        }}
+        renderItem={({ item }) => (
+          <Image source={{ uri: item.source }} style={styles.postImage} />
+        )}
       />
       <View style={styles.scrollBar}>
         {content.map((item: any, index: number) => (
