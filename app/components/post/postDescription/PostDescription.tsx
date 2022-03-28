@@ -6,7 +6,7 @@ import styles from './styles/PostDescription.style';
 
 interface IPostDescription {
   username: string;
-  description: string;
+  description?: string;
 }
 
 const PostDescription: FC<IPostDescription> = ({ username, description }) => {
