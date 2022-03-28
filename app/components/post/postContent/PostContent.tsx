@@ -1,9 +1,10 @@
 import React, { FC, useState, useRef } from 'react';
-import { FlatList, Image, View } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { useTheme } from '../../../theme/theme';
 import { IContent, TypeEnum } from '../Post';
 
 import styles from './styles/PostContent.style';
+import FastImage from 'react-native-fast-image';
 
 export interface IPostContent {
   content: IContent[];
@@ -19,9 +20,9 @@ const PostContent: FC<IPostContent> = ({ content }) => {
 
   if (content.length === 1) {
     return content[0].type === TypeEnum.image ? (
-      <Image source={{ uri: content[0].source }} style={styles.postImage} />
+      <FastImage source={{ uri: content[0].source }} style={styles.postImage} />
     ) : (
-      <Image source={{ uri: content[0].source }} style={styles.postImage} />
+      <FastImage source={{ uri: content[0].source }} style={styles.postImage} />
     );
   }
   return (
@@ -34,7 +35,7 @@ const PostContent: FC<IPostContent> = ({ content }) => {
         disableIntervalMomentum={true}
         onViewableItemsChanged={onViewRef.current}
         renderItem={({ item }) => (
-          <Image source={{ uri: item.source }} style={styles.postImage} />
+          <FastImage source={{ uri: item.source }} style={styles.postImage} />
         )}
       />
       <View style={styles.scrollBar}>
