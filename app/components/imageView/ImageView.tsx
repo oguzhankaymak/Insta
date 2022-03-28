@@ -8,16 +8,29 @@ import { useTheme } from '../../theme/theme';
 interface IImageView {
   source: string;
   isGridView?: boolean;
+  isProfile?: boolean;
 }
 
-const ImageView: FC<IImageView> = ({ source, isGridView = false }) => {
+const ImageView: FC<IImageView> = ({
+  source,
+  isGridView = false,
+  isProfile = false,
+}) => {
   const theme = useTheme();
   const [isLoading, setIsLoading] = useState(false);
+
+  console.log('IMAGE : ', source);
 
   return (
     <View style={styles.container}>
       <FastImage
-        style={isGridView ? styles.gridImage : styles.image}
+        style={
+          isProfile
+            ? styles.profileImage
+            : isGridView
+            ? styles.gridImage
+            : styles.image
+        }
         source={{ uri: source }}
         onLoadStart={() => setIsLoading(true)}
         onLoadEnd={() => setIsLoading(false)}

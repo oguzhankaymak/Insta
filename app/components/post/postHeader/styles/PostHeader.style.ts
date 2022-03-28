@@ -18,12 +18,6 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
 
-  userImage: {
-    width: isTablet ? 50 : 25,
-    height: isTablet ? 50 : 25,
-    borderRadius: isTablet ? 50 : 25,
-  },
-
   username: {
     marginStart: 10,
     fontWeight: 'bold',

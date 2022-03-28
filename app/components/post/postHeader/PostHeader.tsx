@@ -4,7 +4,7 @@ import { useTheme } from '../../../theme/theme';
 import { MoreHorizontal } from '../../icons';
 
 import styles from './styles/PostHeader.style';
-import FastImage from 'react-native-fast-image';
+import ImageView from '../../imageView/ImageView';
 
 interface IPostHeader {
   profileImg: string;
@@ -17,7 +17,7 @@ const PostHeader: FC<IPostHeader> = ({ profileImg, username, place }) => {
   return (
     <View style={styles.container}>
       <View style={styles.nameContainer}>
-        <FastImage source={{ uri: profileImg }} style={styles.userImage} />
+        <ImageView source={profileImg} isProfile />
         <View>
           <Text style={[styles.username, theme.textStyles.usernameText]}>
             {username}
