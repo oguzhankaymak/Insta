@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { View, FlatList, TextInput, ActivityIndicator } from 'react-native';
+import {
+  View,
+  FlatList,
+  TextInput,
+  ActivityIndicator,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import { getPosts } from '../../../actions/HomeAction';
 import { ResultEnum } from '../../../actions/Status';
 import GridView from '../../../components/gridView/GridView';
-import { Search } from '../../../components/icons';
+import { LogOut, Search } from '../../../components/icons';
 import Post, { IContent, IPost } from '../../../components/post/Post';
+import { useSessionContext } from '../../../context/SessionContext';
 import { useTheme } from '../../../theme/theme';
 
 import styles from './styles/HomeScreen.style';
 
 const HomeScreen = () => {
   const theme = useTheme();
+  const { logout } = useSessionContext();
+
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState<IPost[]>();
 
@@ -95,7 +105,7 @@ const HomeScreen = () => {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <View style={styles.searchView}>
+      <View style={styles.header}>
         <View
           style={[
             styles.inputView,
@@ -104,7 +114,7 @@ const HomeScreen = () => {
               borderColor: theme.tertiary,
             },
           ]}>
-          <View style={{ flexDirection: 'row' }}>
+          <View style={styles.searchInput}>
             <Search
               width={styles.searchIcon.width}
               height={styles.searchIcon.height}
@@ -118,6 +128,9 @@ const HomeScreen = () => {
             />
           </View>
         </View>
+        <TouchableOpacity style={styles.logout} onPress={logout}>
+          <Text style={theme.textStyles.logout}>Logout</Text>
+        </TouchableOpacity>
       </View>
       {searchText?.length > 1 ? (
         <FlatList

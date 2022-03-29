@@ -12,10 +12,12 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
 
-  searchView: {
+  header: {
+    width: deviceWidth,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: 10,
-    paddingBottom: 5,
+    padding: 10,
   },
 
   searchIcon: {
@@ -27,8 +29,19 @@ export default StyleSheet.create({
     marginLeft: 8,
   },
 
+  logout: {
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    height: isTablet ? 36 : 30,
+    paddingHorizontal: 10,
+  },
+
+  searchInput: {
+    flexDirection: 'row',
+  },
+
   inputView: {
-    width: deviceWidth - 20,
+    flex: 1,
     height: isTablet ? 36 : 30,
     borderWidth: 1,
     borderRadius: 7,
