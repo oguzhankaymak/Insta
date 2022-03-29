@@ -6,6 +6,12 @@ export default StyleSheet.create({
     flex: 1,
   },
 
+  loading: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   searchView: {
     alignItems: 'center',
     paddingTop: 10,
@@ -20,5 +26,12 @@ export default StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 10,
     marginTop: 6,
+  },
+
+  footerLoading: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 50,
   },
 });
