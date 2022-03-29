@@ -1,5 +1,7 @@
 # Insta
 
+![CI](https://github.com/oguzhankaymak/Insta/actions/workflows/main.yml/badge.svg)
+
 Insta is a like instagram clone mobile application. High dimensional images and videos were used for testing performance. So Maybe image or video does not load quickly please wait.  
 
 ### Some Packages / Libraries
@@ -38,5 +40,11 @@ npx react-native run-ios
 ## Usage
 
 Login: You can enter any uername and random password.
+
+## Test
+
+```sh
+yarn run test
+```
 
 
