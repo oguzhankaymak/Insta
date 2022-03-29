@@ -19,8 +19,6 @@ const ImageView: FC<IImageView> = ({
   const theme = useTheme();
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log('IMAGE : ', source);
-
   return (
     <View style={styles.container}>
       <FastImage
