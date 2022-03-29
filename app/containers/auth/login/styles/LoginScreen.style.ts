@@ -39,4 +39,41 @@ export default StyleSheet.create({
   footer: {
     marginTop: 40,
   },
+
+  forgotText: {
+    alignItems: 'flex-end',
+    marginTop: 15,
+  },
+
+  braceView: {
+    marginTop: 50,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  line: {
+    flex: 0.5,
+    height: 1,
+  },
+
+  facebookButtonView: {
+    marginTop: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  facebookButton: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  facebookIcon: {
+    width: isTablet ? 30 : 18,
+    height: isTablet ? 30 : 18,
+  },
+
+  facebookText: {
+    paddingHorizontal: 5,
+  },
 });

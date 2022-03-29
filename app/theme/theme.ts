@@ -22,6 +22,9 @@ export interface ITheme {
     dateText: TextStyle;
     likeCountText: TextStyle;
     logout: TextStyle;
+    forgotText: TextStyle;
+    braceText: TextStyle;
+    alternativeLoginText: TextStyle;
   };
 }
 
@@ -38,7 +41,7 @@ const texts = StyleSheet.create({
   } as TextStyle,
 
   largeInput: {
-    fontSize: isTablet ? 24 : 13,
+    fontSize: isTablet ? 20 : 13,
     color: colors.main.black,
   } as TextStyle,
 
@@ -83,6 +86,22 @@ const texts = StyleSheet.create({
     fontSize: isTablet ? 14 : 10,
     color: colors.red.primary,
     fontWeight: 'bold',
+  },
+
+  forgotText: {
+    fontSize: isTablet ? 14 : 10,
+    color: colors.blue.primary,
+  },
+
+  braceText: {
+    fontSize: isTablet ? 18 : 15,
+    color: colors.gray.tertiary,
+    fontWeight: 'bold',
+  },
+
+  alternativeLoginText: {
+    fontSize: isTablet ? 22 : 16,
+    color: colors.blue.primary,
   },
 });
 
