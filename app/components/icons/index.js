@@ -1,4 +1,5 @@
 export { default as Bookmark } from './Bookmark';
+export { default as Facebook } from './Facebook';
 export { default as Heart } from './Heart';
 export { default as MessageCircle } from './MessageCircle';
 export { default as MoreHorizontal } from './MoreHorizontal';
