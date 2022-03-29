@@ -1,4 +1,4 @@
-import { deviceWidth } from './../../../../utils/Metrics';
+import { deviceWidth, isTablet } from './../../../../utils/Metrics';
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
@@ -18,9 +18,18 @@ export default StyleSheet.create({
     paddingBottom: 5,
   },
 
+  searchIcon: {
+    width: isTablet ? 26 : 20,
+    height: isTablet ? 26 : 20,
+  },
+
+  input: {
+    marginLeft: 8,
+  },
+
   inputView: {
     width: deviceWidth - 20,
-    height: 28,
+    height: isTablet ? 36 : 30,
     borderWidth: 1,
     borderRadius: 7,
     justifyContent: 'center',

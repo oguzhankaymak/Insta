@@ -3,6 +3,7 @@ import { View, FlatList, TextInput, ActivityIndicator } from 'react-native';
 import { getPosts } from '../../../actions/HomeAction';
 import { ResultEnum } from '../../../actions/Status';
 import GridView from '../../../components/gridView/GridView';
+import { Search } from '../../../components/icons';
 import Post, { IContent, IPost } from '../../../components/post/Post';
 import { useTheme } from '../../../theme/theme';
 
@@ -53,6 +54,8 @@ const HomeScreen = () => {
         setPosts(response.data);
         setPaginationPosts(response.data.slice(0, pageSize));
         setLoading(false);
+      } else {
+        setLoading(false);
       }
     } else {
       setIsMoreLoading(false);
@@ -101,12 +104,19 @@ const HomeScreen = () => {
               borderColor: theme.tertiary,
             },
           ]}>
-          <TextInput
-            style={[theme.textStyles.largeInput]}
-            placeholder="Search"
-            value={searchText}
-            onChangeText={setSearchText}
-          />
+          <View style={{ flexDirection: 'row' }}>
+            <Search
+              width={styles.searchIcon.width}
+              height={styles.searchIcon.height}
+              color={theme.tertiary}
+            />
+            <TextInput
+              style={[styles.input, theme.textStyles.largeInput]}
+              placeholder="Search"
+              value={searchText}
+              onChangeText={setSearchText}
+            />
+          </View>
         </View>
       </View>
       {searchText?.length > 1 ? (
