@@ -26,7 +26,8 @@ export default StyleSheet.create({
   },
 
   input: {
-    marginLeft: 8,
+    flex: 1,
+    paddingLeft: 8,
   },
 
   logout: {
@@ -42,7 +43,7 @@ export default StyleSheet.create({
 
   inputView: {
     flex: 1,
-    height: isTablet ? 36 : 30,
+    height: isTablet ? 38 : 30,
     borderWidth: 1,
     borderRadius: 7,
     justifyContent: 'center',

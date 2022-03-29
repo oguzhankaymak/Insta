@@ -10,7 +10,7 @@ import {
 import { getPosts } from '../../../actions/HomeAction';
 import { ResultEnum } from '../../../actions/Status';
 import GridView from '../../../components/gridView/GridView';
-import { LogOut, Search } from '../../../components/icons';
+import { Search } from '../../../components/icons';
 import Post, { IContent, IPost } from '../../../components/post/Post';
 import { useSessionContext } from '../../../context/SessionContext';
 import { useTheme } from '../../../theme/theme';
@@ -147,6 +147,7 @@ const HomeScreen = () => {
           data={paginationPosts}
           onEndReachedThreshold={0.1}
           onEndReached={loadMoreData}
+          removeClippedSubviews={true}
           ListFooterComponent={renderFooter}
           renderItem={({ item }) => <Post postData={item} />}
         />
