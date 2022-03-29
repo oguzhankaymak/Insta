@@ -47,4 +47,13 @@ Login: You can enter any uername and random password.
 yarn run test
 ```
 
+## Screenshots
+
+https://user-images.githubusercontent.com/36153454/160716829-a3c883fc-d21f-4983-9b75-52c6bbbaaafc.mov
+
+https://user-images.githubusercontent.com/36153454/160716968-0dd5d3b3-7ce6-45c9-9160-bcfa583b1b15.mov
+
+
+
+
 
