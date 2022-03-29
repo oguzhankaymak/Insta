@@ -11,5 +11,8 @@ const colors = {
     secondary: 'rgb(239, 239, 239)',
     tertiary: 'rgb(153, 153, 153)',
   },
+  red: {
+    primary: 'rgb(144,78,78)',
+  },
 };
 export default colors;

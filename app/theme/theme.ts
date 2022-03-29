@@ -21,6 +21,7 @@ export interface ITheme {
     usernameBoldText: TextStyle;
     dateText: TextStyle;
     likeCountText: TextStyle;
+    logout: TextStyle;
   };
 }
 
@@ -76,6 +77,12 @@ const texts = StyleSheet.create({
     fontSize: isTablet ? 22 : 12,
     color: colors.main.black,
     fontWeight: '600',
+  },
+
+  logout: {
+    fontSize: isTablet ? 14 : 10,
+    color: colors.red.primary,
+    fontWeight: 'bold',
   },
 });
 
