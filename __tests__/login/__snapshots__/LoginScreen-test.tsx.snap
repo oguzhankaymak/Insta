@@ -1,0 +1,751 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The button should be clickable if username and password inputs is not empty 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginTop": 190.57142857142858,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(0,0,0)",
+          "fontSize": 25,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Insta
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 30,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginTop": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginTop": 6,
+              "paddingHorizontal": 3,
+              "width": 680,
+            },
+            Object {
+              "backgroundColor": "rgb(250, 250, 250)",
+              "borderColor": "rgb(239, 239, 239)",
+            },
+          ]
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          onChangeText={[Function]}
+          placeholder="Phone, username or e-mail"
+          style={
+            Array [
+              Object {
+                "padding": 8,
+              },
+              Object {
+                "color": "rgb(0,0,0)",
+                "fontSize": 13,
+              },
+            ]
+          }
+          value="oguzhankaymakk"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginTop": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginTop": 6,
+              "paddingHorizontal": 3,
+              "width": 680,
+            },
+            Object {
+              "backgroundColor": "rgb(250, 250, 250)",
+              "borderColor": "rgb(239, 239, 239)",
+            },
+          ]
+        }
+      >
+        <TextInput
+          autoComplete="password"
+          onChangeText={[Function]}
+          placeholder="Password"
+          secureTextEntry={true}
+          style={
+            Array [
+              Object {
+                "padding": 8,
+              },
+              Object {
+                "color": "rgb(0,0,0)",
+                "fontSize": 13,
+              },
+            ]
+          }
+          value="123"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "marginTop": 15,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={false}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(0, 149, 246)",
+              "fontSize": 10,
+            }
+          }
+        >
+          Forgot password?
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "marginTop": 40,
+          },
+          Object {
+            "backgroundColor": "rgb(0, 149, 246)",
+          },
+          false,
+        ]
+      }
+    >
+      <View
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRadius": 10,
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 665,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(255,255,255)",
+              "fontSize": 13,
+            }
+          }
+        >
+          Login
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginTop": 50,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flex": 0.5,
+              "height": 1,
+            },
+            Object {
+              "backgroundColor": "rgb(239, 239, 239)",
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "paddingHorizontal": 20,
+            },
+            Object {
+              "color": "rgb(153, 153, 153)",
+              "fontSize": 15,
+              "fontWeight": "bold",
+            },
+          ]
+        }
+      >
+        OR
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "flex": 0.5,
+              "height": 1,
+            },
+            Object {
+              "backgroundColor": "rgb(239, 239, 239)",
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginTop": 40,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={false}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "opacity": 1,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={18}
+          bbWidth={18}
+          className=""
+          fill="none"
+          focusable={false}
+          height={18}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 18,
+                "width": 18,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={18}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={null}
+            propList={
+              Array [
+                "fill",
+                "stroke",
+                "strokeWidth",
+                "strokeLinecap",
+                "strokeLinejoin",
+              ]
+            }
+            stroke={
+              Array [
+                2,
+              ]
+            }
+            strokeLinecap={1}
+            strokeLinejoin={1}
+            strokeWidth={2}
+          >
+            <RNSVGPath
+              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <Text
+          style={
+            Array [
+              Object {
+                "paddingHorizontal": 5,
+              },
+              Object {
+                "color": "rgb(0, 149, 246)",
+                "fontSize": 16,
+              },
+            ]
+          }
+        >
+          Log in with Facebook
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The button should be disabled if any input is empty 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginTop": 190.57142857142858,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(0,0,0)",
+          "fontSize": 25,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Insta
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 30,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginTop": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginTop": 6,
+              "paddingHorizontal": 3,
+              "width": 680,
+            },
+            Object {
+              "backgroundColor": "rgb(250, 250, 250)",
+              "borderColor": "rgb(239, 239, 239)",
+            },
+          ]
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          onChangeText={[Function]}
+          placeholder="Phone, username or e-mail"
+          style={
+            Array [
+              Object {
+                "padding": 8,
+              },
+              Object {
+                "color": "rgb(0,0,0)",
+                "fontSize": 13,
+              },
+            ]
+          }
+          value="oguzhankaymakk"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginTop": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginTop": 6,
+              "paddingHorizontal": 3,
+              "width": 680,
+            },
+            Object {
+              "backgroundColor": "rgb(250, 250, 250)",
+              "borderColor": "rgb(239, 239, 239)",
+            },
+          ]
+        }
+      >
+        <TextInput
+          autoComplete="password"
+          onChangeText={[Function]}
+          placeholder="Password"
+          secureTextEntry={true}
+          style={
+            Array [
+              Object {
+                "padding": 8,
+              },
+              Object {
+                "color": "rgb(0,0,0)",
+                "fontSize": 13,
+              },
+            ]
+          }
+          value=""
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "marginTop": 15,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={false}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(0, 149, 246)",
+              "fontSize": 10,
+            }
+          }
+        >
+          Forgot password?
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "marginTop": 40,
+          },
+          Object {
+            "backgroundColor": "rgb(0, 149, 246)",
+          },
+          Object {
+            "opacity": 0.4,
+          },
+        ]
+      }
+    >
+      <View
+        accessibilityState={
+          Object {
+            "disabled": true,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRadius": 10,
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 665,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(255,255,255)",
+              "fontSize": 13,
+            }
+          }
+        >
+          Login
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginTop": 50,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flex": 0.5,
+              "height": 1,
+            },
+            Object {
+              "backgroundColor": "rgb(239, 239, 239)",
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "paddingHorizontal": 20,
+            },
+            Object {
+              "color": "rgb(153, 153, 153)",
+              "fontSize": 15,
+              "fontWeight": "bold",
+            },
+          ]
+        }
+      >
+        OR
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "flex": 0.5,
+              "height": 1,
+            },
+            Object {
+              "backgroundColor": "rgb(239, 239, 239)",
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginTop": 40,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={false}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "opacity": 1,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={18}
+          bbWidth={18}
+          className=""
+          fill="none"
+          focusable={false}
+          height={18}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 18,
+                "width": 18,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={18}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={null}
+            propList={
+              Array [
+                "fill",
+                "stroke",
+                "strokeWidth",
+                "strokeLinecap",
+                "strokeLinejoin",
+              ]
+            }
+            stroke={
+              Array [
+                2,
+              ]
+            }
+            strokeLinecap={1}
+            strokeLinejoin={1}
+            strokeWidth={2}
+          >
+            <RNSVGPath
+              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <Text
+          style={
+            Array [
+              Object {
+                "paddingHorizontal": 5,
+              },
+              Object {
+                "color": "rgb(0, 149, 246)",
+                "fontSize": 16,
+              },
+            ]
+          }
+        >
+          Log in with Facebook
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
