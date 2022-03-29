@@ -22,7 +22,7 @@ const VideoPlayer: FC<IVideoPlayer> = ({ source, isGridView = false }) => {
     setIsLoading(false);
   };
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: theme.dark }]}>
       <Video
         source={{ uri: source }}
         style={isGridView ? styles.gridVieo : styles.video}
@@ -35,7 +35,7 @@ const VideoPlayer: FC<IVideoPlayer> = ({ source, isGridView = false }) => {
       {isLoading && (
         <ActivityIndicator
           size="small"
-          color={theme.dark}
+          color={theme.white}
           style={styles.activityIndicator}
         />
       )}
