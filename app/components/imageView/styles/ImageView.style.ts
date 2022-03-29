@@ -14,8 +14,8 @@ export default StyleSheet.create({
   },
 
   gridImage: {
-    width: isTablet ? deviceWidth / 3 : deviceWidth / 2,
-    height: 200,
+    width: deviceWidth / 2,
+    height: isTablet ? 400 : 200,
   },
 
   loading: {
